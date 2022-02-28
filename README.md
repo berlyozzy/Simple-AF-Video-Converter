@@ -12,7 +12,16 @@ To make this solution more accessible to other potential users, who don't feel c
 
 <br>
 
-![example](readme_img/sample.png)
+![default](readme_img/sample.webp)
+*(default)*
+
+![render setup](readme_img/sample2.webp)
+*(render setup)*
+
+![render results](readme_img/sample3.webp)
+*(render results)*
+
+>Files can be excluded from the render list
 
 <br>
 

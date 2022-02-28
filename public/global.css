@@ -1,0 +1,191 @@
+@import "./bulma.min.css";
+
+:root{
+	--background: #1f1f1f;
+	--middle: #252526;
+	--foreground: #333333;
+	--text: #eeffff;
+	--another-text: #bbbbbb;
+	--folder: #FFCB6B;
+	--disabled-highlight: #ffffff25;
+	--highlight: #ffffff12;
+	--highlight2: #2a2d2e;
+	--tag: #FF8964;
+	--tag-light: #ff8964b8;
+	--blue-tag: #3c8dc8;
+	--blue-tag-light: #3c8ec864;
+	
+	--warning: #f5cb5cff;
+	--warning-light: rgba(245, 204, 92, 0.2);
+	--primary: #66DE93;
+	--danger: #FF8964;
+
+
+	--timberwolf: #cfdbd5ff;
+	--alabaster: #e8eddfff;
+	--maize-crayola: #f5cb5cff;
+	--eerie-black: #242423ff;
+	--middle: #2B2C2B;
+	--jet: #333533ff;
+
+	--toastBackground: #FF8964;
+	--toastBarBackground: #eeffff;
+	--toastContainerTop: 3rem;
+	--toastContainerRight: 1.5rem;
+	--toastWidth: max-content;
+}
+
+*::-webkit-scrollbar {
+    width: 7px;
+}
+
+*::-webkit-scrollbar-track{
+    background: transparent !important;
+}
+
+*::-webkit-scrollbar-thumb{
+	background-color: var(--foreground) !important;
+	border-radius: 5px !important;
+}
+
+
+body, html{
+	overflow: auto;
+	height: 100vh;
+	width: 100vw;
+	background: var(--middle);
+}
+
+h3, label{
+	color: var(--another-text) !important;
+}
+
+
+.content-drop-icon svg{
+	color: var(--another-text);
+}
+
+.content p:not(:last-child){
+	margin: 0;
+}
+
+.buttons:not(:last-child){
+	margin: 0;
+}
+
+.button{
+	border-radius: 0;
+	background: var(--foreground);
+    border: none;
+    color: var(--text);
+}
+
+.button:hover{
+	background: var(--middle);
+    color: var(--warning);
+}
+
+.button:focus{
+	background: var(--warning);
+    color: var(--middle);
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.button[disabled]{
+	background-color: var(--foreground);
+    border-color: #dbdbdb;
+    box-shadow: none;
+    opacity: .5;
+}
+
+.button.is-selected{
+	background: var(--warning);
+    color: var(--middle);
+}
+
+.button.is-completed{
+	color: var(--primary);
+}
+
+.button.is-completed:focus{
+    background: var(--primary);
+	color: var(--middle) !important;
+}
+
+.button.danger-hover:hover{
+    color: var(--danger);
+}
+
+.button.danger-hover:focus{
+    background: var(--danger);
+	color: var(--middle) !important;
+}
+
+.button.danger-hover.is-loading{
+	background: var(--danger);
+	color: var(--middle) !important;
+}
+
+.button[disabled].danger-hover.is-loading{
+	color: transparent !important;
+	pointer-events: auto !important;
+}
+
+
+.button.danger-hover.is-loading::after{
+	border: 2px solid var(--text);
+	border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+hr{
+	background: var(--disabled-highlight);
+	height: 1px;
+    margin: 1rem 0;
+}
+
+.input, .textarea{
+	background: transparent !important;
+	border-color: var(--foreground) !important;
+	color: var(--another-text) !important;
+	border-radius: 0;
+}
+
+.input:disabled{
+	color: var(--highlight) !important;
+}
+
+.input.is-not-valid, .textarea.is-not-valid{
+	border: solid 1px var(--danger) !important
+}
+
+input:focus, textarea:focus{
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.textarea{
+	height: 100% !important;
+	resize: none !important;
+}
+
+.textarea:not([rows]){
+	max-height: 100% !important;
+	min-height: inherit !important;
+}
+
+.textarea::placeholder, .input::placeholder{
+	color: var(--highlight);
+}
+
+.token.number, .token.tag { all: inherit; }
+
+pre[class*=language-] {
+    margin: 0 !important;
+    white-space: pre-line !important;
+    font-size: 0.9em !important;
+	min-height: 100% !important;
+	background: transparent !important;
+    overflow: auto;
+}

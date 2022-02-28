@@ -1,0 +1,8 @@
+node_modules
+build
+dist
+*.mp4
+*.webm
+*.avi
+package-lock.json
+rendertest
